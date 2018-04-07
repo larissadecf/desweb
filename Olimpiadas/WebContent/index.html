@@ -1,40 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt">
+
 <head>
-<meta charset="UTF-8">
-<title>Olimpiadas</title>
+    <meta charset="UTF-8">
+    <title>Olimpiadas</title>
+    <link rel="stylesheet" href="main.css">
+    
+    
 </head>
 <body>
-<h3>Olimpiadas</h3>
-<form action="ManterOlimpiadas.do" method="post">
-ano: <input type="text" name="ano"><br>
-tipo: <input type="text" name="tipo"><br>
-<input type="submit">
-</form>
-
-<table style="width:100%">
-  <caption>Resultados</caption>
-  <tr>
-    <th>Pais</th>
-    <th>Modalidades</th>
-    <th>Ouro</th>
-    <th>Prata</th> 
-    <th>Bronze</th>
-  <tr>
-    <td>Brasil</td>
-    <td>boxes</td>
-    <td>0</td>
-    <td>1</td>
-    <td>0</td>
-  </tr>
-  <tr>
-    <td>Argentina</td>
-    <td>boxes</td>
-    <td>3</td>
-    <td>1</td>
-    <td>0</td>
-  </tr>
-</table>
-
+    <h2>Olimpiadas</h2>
+    <form action="Olimpadas.jsp" method="get" >
+        <p>Por favor, selecione os dados abaixo.</p>
+        <fieldset class="olimpiadas">
+            
+            <div>
+            <label for="ano">Ano</label>
+                <input type="text" name="ano"  size="8" maxlength="12" placeholder="Ano da Olimpiadas" required />
+            </div>
+        <input type="radio" name="tipo" checked />
+                        <label for="verao">Verão</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="tipo"  />
+                        <label for="inverno">Inverno</label>
+                    </div>
+            
+        </fieldset>
+        
+            <div class="container">
+  <h2>Olimpiadas</h2>         
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Pais</th>
+        <th>Modalidades</th>
+        <th>Ouro</th>
+        <th>Prata</th>
+        <th>Bronze</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Brasil</td>
+        <td>Boxe</td>
+        <td>1</td>
+        <td>0</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td>Alemanha</td>
+        <td>Boxe</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+      </tr>
+      
+    </tbody>
+  </table>
+</div>
+    </form>
 </body>
+
 </html>
