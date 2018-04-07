@@ -1,7 +1,6 @@
 package Controller;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
@@ -61,13 +60,8 @@ public class ManterOlimpiadasController extends HttpServlet {
 	    
 	    request.setAttribute("Olimp",o);
 	    
-	    PrintWriter out = response.getWriter();
-		out.println("<html><head><title>Olimpiadas</title></head><body>");
-		out.println( "ano: "+o.getAno()+"<br>");
-		out.println( "tipo: "+o.getTipo()+"<br>");
-		out.println( "pais: "+o.getPais()+"<br>");
-		out.println( "modalidade: "+o.getModalidade()+"<br>");
-		out.println("</body></html>");
+	    RequestDispatcher view = request.getRequestDispatcher("Olimpiadas.jsp");
+		view.forward(request, response);
 	    		
 	}
 
